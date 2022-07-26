@@ -7,13 +7,14 @@ import { DetailBurgerComponent } from './detail-burger/detail-burger.component';
 import { LayoutModule } from '../layout/layout.module';
 import { QuantiteComponent } from './quantite/quantite.component';
 import { CardComponent } from '../card/card.component';
-
+import { CardBoisonComponent } from './card-boison/card-boison.component';
 
 @NgModule({
   declarations: [
     DetailComponent,
     DetailBurgerComponent,
     QuantiteComponent,
+    CardBoisonComponent,
   ],
   imports: [
     CommonModule,

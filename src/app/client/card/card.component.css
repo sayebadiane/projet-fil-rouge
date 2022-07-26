@@ -6,7 +6,7 @@
     border-radius: 0px;
     display: flex;
     flex-direction: column;
-    margin-left: 1em;
+    margin-left: -2em;
     
     
 }
@@ -48,4 +48,23 @@
 
 .buttonDetail {
     background-color: black;
+}
+.image img{
+    height: 8em;
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 2em;
+}
+.text{
+    display: flex;
+    flex-direction: row;
+}
+.ajouter{
+    display: flex;
+    flex-direction: row;
+}
+.detail{
+    margin-left: 10em;
+    background-color: #F00000;
 }

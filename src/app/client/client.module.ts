@@ -7,6 +7,7 @@ import { LayoutModule } from './layout/layout.module';
 import { ImagebogyComponent } from './imagebogy/imagebogy.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { CardComponent } from './card/card.component';
+import { ListeCadrdeComponent } from './liste-cadrde/liste-cadrde.component';
 
 
 @NgModule({
@@ -14,12 +15,18 @@ import { CardComponent } from './card/card.component';
     ClientComponent,
     ImagebogyComponent,
     CatalogueComponent,
-    CardComponent
+    CardComponent,
+    ListeCadrdeComponent
   ],
   imports: [
     CommonModule,
     ClientRoutingModule,
     LayoutModule
+  ],
+  exports: [
+    ListeCadrdeComponent,
+    ImagebogyComponent
   ]
+  
 })
 export class ClientModule { }

@@ -1,0 +1,17 @@
+.main-quantite{
+    display: flex;
+
+}
+.case{
+    width: 1em;
+    height: 1em;
+    margin-left: 1em;
+}
+.case1{
+    display: flex;
+    font-size: 1.5em;
+    color: white;
+    background-color: red;
+    justify-content: center;
+    text-align: center;
+}

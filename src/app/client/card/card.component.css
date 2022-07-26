@@ -1,0 +1,51 @@
+.card {
+    height: 312px;
+    width: 358px;
+    left: 113px;
+    top: 10px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    
+    
+}
+
+.prix {
+    flex: 1.5;
+    width: 5em;
+    color: white;
+    border: 1px solid white;
+    box-shadow: inset 5em 1em black;
+}
+
+.image {
+    flex: 9;
+    width: 100%;
+    background-image: url("../../../assets/image/imagesburger.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nom {
+    flex: 1.5;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.btn {
+    flex: 1;
+    color: white;
+
+
+}
+
+.buttonAjouter {
+    background-color: #F00000;
+    margin-right: 4.9em;
+}
+
+.buttonDetail {
+    background-color: black;
+}

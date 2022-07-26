@@ -1,0 +1,16 @@
+.liste {
+    width: 90%;
+    background-color: #f00000;
+    margin-left: 5%;
+    border-radius: 20px;
+
+
+}
+
+.rounded {
+    border-radius: 20em;
+    color: white;
+    align-items: center;
+    font-size: 2em;
+    margin-left: 13em;
+}

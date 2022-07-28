@@ -11,5 +11,14 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  togol(a: string): void{
+    if (a == 'menu') {
+      alert("ok")
+
+    } if (a == 'burger') {
+      
+    }
+    
+  }
 
 }

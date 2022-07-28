@@ -4,5 +4,5 @@
     <button class="btn rounded" type="button">Les Burger De Notre Restaurant</button>
 </div>
 
-<app-liste-cadrde></app-liste-cadrde>
+<app-liste-cadrde *ngIf="burger$|async as produits " [listburger]="produits.burgers"></app-liste-cadrde>
 <app-foother></app-foother>

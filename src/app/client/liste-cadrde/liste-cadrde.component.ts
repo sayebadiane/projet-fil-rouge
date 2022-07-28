@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Produit } from '../shared/models/modelProduit';
 
 @Component({
   selector: 'app-liste-cadrde',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./liste-cadrde.component.css']
 })
 export class ListeCadrdeComponent implements OnInit {
+  @Input('listburger') listburger: Produit[] | undefined = undefined
+
+  @Input('prod') produits: Produit[] | undefined = undefined
 
   constructor() { }
 

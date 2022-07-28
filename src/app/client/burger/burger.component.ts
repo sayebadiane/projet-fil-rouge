@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Catalogue } from '../shared/models/catalogue';
+import { CatalogueService } from '../shared/services/catalogue.service';
 
 @Component({
   selector: 'app-burger',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BurgerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private produitcatalogue:CatalogueService) { }
+  burger$:Observable<Catalogue>|null=null
 
   ngOnInit(): void {
+    this.burger$=this.produitcatalogue.allBurger()
   }
 
 }

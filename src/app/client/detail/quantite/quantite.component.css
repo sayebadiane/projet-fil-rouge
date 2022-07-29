@@ -1,17 +1,40 @@
 .main-quantite{
     display: flex;
+        box-shadow: 5px 10px white;
+        ;
+        margin-left: 3em;
 
 }
-.case{
-    width: 1em;
-    height: 1em;
-    margin-left: 1em;
+
+
+.quantite1{
+    /* border: 1px solid black; */
+    width: 7em;
+    height: 2em;
+    display: flex; 
+
 }
-.case1{
-    display: flex;
-    font-size: 1.5em;
+.variable{
+    flex: 1;
+  
+}
+.moin{
+    flex: 1;
     color: white;
-    background-color: red;
+        background-color: #f00000;
+        
+    
+}
+.plus{
+    flex: 1;
+    background-color: #f00000;
+    color: white;
+    
+}
+.quantie2{
+    display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    font-size: 2em;
+
 }

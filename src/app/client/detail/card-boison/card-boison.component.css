@@ -14,9 +14,11 @@
     
 }
 .boison-prix{
+    flex: 2;
     color: white;
     border: 1px solid white;
-    box-shadow: inset 5em 1em black;
+    color: black;
+    margin-left: 6em;
 }
 .boison-quantite{
     flex: 1;
@@ -35,7 +37,7 @@
 }
 .btn {
     flex: 1;
-    color: white;
+    
     display: flex;
     flex-direction: row;
 

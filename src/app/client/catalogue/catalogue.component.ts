@@ -14,42 +14,57 @@ import { Catalogue } from '../shared/models/catalogue';
 })
 export class CatalogueComponent implements OnInit {
    variable:string=""
-   produit$: Observable<Catalogue> | null = null;
-  // catalogue:Produit[]|null=null
+  //  produit$: Observable<Catalogue> | null = null;
+  catalogue:Produit[]|undefined=undefined
    
 
   constructor(private produitcatalogue:CatalogueService ) { }
 
   ngOnInit(): void {
-    this.produit$ = this.produitcatalogue.all();
+    // this.produit$ = this.produitcatalogue.all();
 
     
     // this.produitcatalogue.all().subscribe((data) => this.catalogue = data)
 
-
+  
     
-    // this.produitcatalogue.all().subscribe(data => {
-    //   this.catalogue=data.produits
-    // })
+    this.produitcatalogue.all().subscribe(data => {
+      this.catalogue=data.produits
+    })
 
   }
   cat(a: string): void{
-    if (a == "") {
-      this.produit$ = this.produitcatalogue.all().pipe();
-
+    
+    this.produitcatalogue.all().subscribe(data => {
+      if (a == "") {
+        this.catalogue = data.produits
+      }
+      else {
+       
+        this.catalogue = data.produits?.filter(produit =>
+          produit.type==a)
+      }
+      })
     }
-    else if (a == 'menu') {
-      this.produit$ = this.produitcatalogue.allMenu()
+    // else if (a == 'menu') {
+    //   // this.produit$ = this.produitcatalogue.allMenu()
+    //   this.produitcatalogue.all().subscribe(data => {
+    //     this.catalogue = data.menus
+    //   })
+    // }
 
-    }
-    else if (a == 'burger') {
-      this.produit$ = this.produitcatalogue.allBurger()
+    
+    // else if (a == 'burger') {
+    //   // this.produit$ = this.produitcatalogue.allBurger()
+    //   this.produitcatalogue.all().subscribe(data => {
+    //     this.catalogue = data.burgers
+    //   })
       
-    }
+    // }
     
     
     
   }
   
 
-}
+

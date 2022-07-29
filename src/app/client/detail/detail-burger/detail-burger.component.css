@@ -1,41 +1,63 @@
-.main-detail {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-}
-.image-detail-burger{
-    width: 20%;
-    height: 16em;
-    margin-left: 5em;
-    background-image: url("../../../../assets/image/burger-regime-123rf.jpg");
-    background-color: aqua;
-}
-.text-detail-burger{
-    width: 50%;
-    height: 15em;
-    display: flex;
-    flex-direction: column;
-    margin-left: 15em;
-    margin-top: 6em;
-    font-size: 1em;
-    color: black;
-}
-.nomburger-detail-burger{
-    align-items: center;
-}
-.desciption-detail-text{
-    width: 100%;
-    height: 70em;
-}
-.prix-detail-text{
-    width: 100%;
-    height: 27em;
+.main-deatail {
+    width: 92%;
+    height: 20em;
     margin-left: 4em;
     display: flex;
     flex-direction: row;
+   
+    font-family: arial;
+    font-size: 1em;
+    border: 1px solid;
+    
+    box-shadow: 5px 10px red;
+
 }
-.src-image{
-    width: 1%;
-    height: 20%;
+
+.photo-detail {
+    flex: 2;
+    padding: 10px;
+    box-shadow: 5px 10px white;
+
+}
+
+.photo-detail img {
+    width: 90%;
+    height: 16em;
+    border-radius: 20px;
+
+}
+
+.photo-detail p {
+    font-size: 1.5em;
+    margin-left: 3em;
+
+}
+
+.text-detail {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.description {
+
+    flex: 5;
+    color: black;
+    margin-left: 2em;
+    margin-top: 4em;
+
+}
+
+.quantite-prix {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+}
+
+.quantite-prix p {
+    margin-left: 4em;
+    font-size: 1.5em;
+
 }

@@ -1,0 +1,44 @@
+{{menu?.menuBurgers|json}}
+<div class="main-deatail">
+    <div>
+        
+    </div>
+    <div class="photo-detail">
+        <img *ngIf="menu?.type=='burger'" src="data:image/png;base64,{{menu?.image}}" alt="" srcset="">
+        <img *ngIf="menu?.type=='menu'" src="data:image/png;base64,{{menu?.image}}" alt="" srcset="">
+
+
+        <p *ngIf="menu?.type=='burger'"> {{menu?.nom }}</p>
+        <p *ngIf="menu?.type=='menu'"> {{menu?.nom }}</p>
+
+    </div>
+    <div class="text-detail">
+        <div class="description">
+            <p>Un hamburger, ou par aphérèse burger,
+                est un sandwich d'origine allemande,
+                composé de deux pains de forme ronde généralement garnis de steak haché et de crudités, salade,
+                tomate, oignon, cornichon, et de sauce… Wikipédia
+            </p>
+        </div>
+        <div class="quantite-prix">
+            <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
+                <p *ngIf="menu?.type=='burger'">Prix: {{menu?.prix}} FCFA</p>
+                <p *ngIf="menu?.type=='menu'"> {{menu?.prix }}</p>
+
+            </div>
+            
+            <div class="appquantite">
+                <app-quantite></app-quantite>
+            </div>
+        </div>
+
+    </div>
+    
+
+</div>
+<div class="burger">
+
+
+    <app-detail-menu-burger *ngIf="(menu?.menuBurgers) as item" [menuburger]="item"></app-detail-menu-burger>
+
+</div>

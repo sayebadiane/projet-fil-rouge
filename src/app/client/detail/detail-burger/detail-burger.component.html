@@ -1,7 +1,10 @@
 <div class="main-deatail">
   <div class="photo-detail">
-   <img src="../../../assets/image/burger-regime-123rf.jpg" alt="" srcset="">
-   <p>burger simple</p>
+   <img *ngIf="burg?.type=='burger'" src="data:image/png;base64,{{burg?.image}}" alt="" srcset="">
+
+   
+   <p *ngIf="burg?.type=='burger'">  {{burg?.nom }}</p>
+
   </div>
   <div class="text-detail">
     <div class="description">
@@ -13,7 +16,8 @@
     </div>
     <div class="quantite-prix">
         <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">                
-          <p>Prix: 2500 FCFA</p>
+          <p *ngIf="burg?.type=='burger'">Prix: {{burg?.prix}} FCFA</p>
+
          </div>
          <div class="appquantite">
           <app-quantite></app-quantite>

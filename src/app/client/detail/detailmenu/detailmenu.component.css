@@ -1,0 +1,67 @@
+.container{
+    display: flex;
+   
+}
+.main-deatail {
+    width: 92%;
+    height: 20em;
+    margin-left: 4em;
+    display: flex;
+    flex-direction: row;
+
+    font-family: arial;
+    font-size: 1em;
+    border: 1px solid;
+
+    box-shadow: 5px 10px red;
+
+}
+
+.photo-detail {
+    flex: 2;
+    padding: 10px;
+    box-shadow: 5px 10px white;
+
+}
+
+.photo-detail img {
+    width: 90%;
+    height: 16em;
+    border-radius: 20px;
+
+}
+
+.photo-detail p {
+    font-size: 1.5em;
+    margin-left: 3em;
+
+}
+
+.text-detail {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.description {
+
+    flex: 5;
+    color: black;
+    margin-left: 2em;
+    margin-top: 4em;
+
+}
+
+.quantite-prix {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+}
+
+.quantite-prix p {
+    margin-left: 4em;
+    font-size: 1.5em;
+
+}

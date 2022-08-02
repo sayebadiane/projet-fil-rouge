@@ -8,6 +8,9 @@ import { LayoutModule } from '../layout/layout.module';
 import { QuantiteComponent } from './quantite/quantite.component';
 import { CardComponent } from '../card/card.component';
 import { CardBoisonComponent } from './card-boison/card-boison.component';
+import { RouterModule } from '@angular/router';
+import { DetailmenuComponent } from './detailmenu/detailmenu.component';
+import { DetailMenuBurgerComponent } from './detail-menu-burger/detail-menu-burger.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +18,14 @@ import { CardBoisonComponent } from './card-boison/card-boison.component';
     DetailBurgerComponent,
     QuantiteComponent,
     CardBoisonComponent,
+    DetailmenuComponent,
+    DetailMenuBurgerComponent,
   ],
   imports: [
     CommonModule,
     DetailRoutingModule,
     LayoutModule,
+    RouterModule
 
     
   ],

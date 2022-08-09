@@ -11,10 +11,11 @@ import { AppComponent } from './app.component';
     AppComponent,
   ],
   imports: [
+    RouterModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-   RouterModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

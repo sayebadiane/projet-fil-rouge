@@ -1,11 +1,8 @@
 
-
-<div *ngFor="let item of  menuburger" class="burgermenu">
-   <div >
-    <img src="data:image/png;base64,{{item.burger?.image}}" alt="" srcset="">
-    <p>{{item.burger?.nom}}
-</p>
-
+<div  class="burgermenu" >
+   <div class="detail-menuburger" *ngFor="let item of  menuburger">
+      <img class="rounded-circle image" src="data:image/png;base64,{{item.burger?.image}}" alt="" srcset="">
+      <p>{{item.burger?.nom}} ({{item.quantite}})</p>
    </div>
+</div> 
 
-</div>

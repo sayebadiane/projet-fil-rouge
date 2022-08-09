@@ -1,0 +1,79 @@
+/* .boisson-detail{
+    width: auto;
+    height: 17em;
+    margin-left: 4em;
+    display: flex;
+    margin-top: 3em;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 3em;
+}
+.ok{
+    display: flex;
+    flex-direction: row;
+}
+.boison-prix-quantite{
+    flex:1.5;
+    display: flex;
+    flex-direction: row;
+    
+}
+.boison-prix{
+    flex: 2;
+    color: white;
+    border: 1px solid white;
+    color: black;
+    margin-left: 6em;
+}
+.boison-quantite{
+    flex: 1;
+    border: 1px solid beige;
+}
+
+.boison-image{
+    flex: 4;
+   margin-top: -1em;
+}
+.boison-nom{
+    flex: 1;
+    background-color: #f00000;
+    
+
+}
+.btn {
+    flex: 1;
+    
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.buttonAjouter {
+    background-color: #F00000;
+    margin-right: 2em;
+}
+
+.buttonDetail {
+    background-color: black;
+} */
+.boisson {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-left: 2em;
+}
+
+.quantite {
+    margin-left: -2em;
+}
+
+.prix-ajouter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

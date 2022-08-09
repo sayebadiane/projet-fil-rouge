@@ -1,49 +1,50 @@
-   
-   <div class="col-xl-6 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-200 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
-                                
-                                                <p>{{card?.prix}}</p>
-                                            </div>
-                                            <div class="h5 image mb-0 font-weight-bold text-gray-800">
-                                                <img src="data:image/png;base64,{{card?.image}}" alt="" srcset="">
-                                            </div>
-                                            <div class="h5  mb-0 font-weight-bold text-gray-800">
-                                                     <p>{{ card?.nom}}</p>
-                                            </div>
-                                            <div class="text">
-                                               <div class="h5 ajouter mb-0 font-weight-bold text-gray-800">
-                                                     <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Ajouter">
-                                                                                               
-                                                      <i class="fa-solid fa-0.1x fa-cart-plus" data-toggle="tooltip" data-placement="top" title="Detail"></i>
+<div class="col-xl-6 col-md-6 mb-4">
+    <div class="card border-left-primary shadow h-200 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
+                        <p>{{card?.prix}}</p>
+                    </div>
+                    <div class="h5 image mb-0 font-weight-bold text-gray-800">
+                        <img src="data:image/png;base64,{{card?.image}}" alt="" srcset="">
+                    </div>
+                    <div class="h5  mb-0 font-weight-bold text-gray-800">
+                        <p>{{ card?.nom}}</p>
+                    </div>
+                    <div class="text">
+                        <div class="h5 ajouter mb-0 font-weight-bold text-gray-800">
+                            
+                            <a>
+                                <button type="button" class="btn btn-secondary" data-toggle="tooltip"
+                                    data-placement="top" title="Ajouter">
 
-                                                       
-                                                    </button>
-                                                
+                                    <i class="fa-solid fa-0.1x fa-cart-plus" data-toggle="tooltip"
+                                        data-placement="top"></i>
 
-                                            </div>
-                                            <div class="h5 detail  mb-0 font-weight-bold text-gray-800">
-                                                 <button type="button" class="btn " data-toggle="tooltip" data-placement="top" title="Detail">
-                                                                                               
-                                                <i class="fa-solid fa-circle-info"></i>
-                                                
 
-                                                       
-                                                    </button>
-                
+                                </button>
 
-                                            </div>
-                                             </div>
-                                               
-                                        </div>
-                                        <div class="col-auto">
+                            </a>
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
+                        <div class="h5 detail mb-0 font-weight-bold text-gray-800">
+                            <a routerLink="/client/detail/{{card?.id}}">
+                                <button type="button" class="btn detail btn-secondary" data-toggle="tooltip" data-placement="top" title="Ajouter">
                         
+                                  <i class="fa-solid fa-circle-info"></i>
+                                </button>
+                        
+                            </a>
+                        
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-auto">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="menuboisson mt-2" >
+
+    <div class="boisson mt-2 mb-2"  *ngFor="let item of menuboisson" >
+        <h4>{{item.taille?.libelle|uppercase }}({{item.quantity}})</h4>
+        <div  *ngFor="let boi of (item.taille?.boissonTailles)">
+            <div class="appquantite">
+                <app-quantite  [maxe]="item.quantity"  [size]="fontSizePx" (onYelle)="yell($event)"  ></app-quantite>
+      
+
+            </div>
+            <img src="../assets/image/{{boi.boisson.nom}}.jpeg" width="100" height="100" alt="">
+            <p>{{ boi.boisson.nom }}</p>
+        </div>  
+    </div>
+</div>

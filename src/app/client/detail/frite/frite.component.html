@@ -1,0 +1,21 @@
+<div class="boisson">
+    <div class="card" style="width: 8rem; height: 14rem;" *ngFor="let item of frite">
+        <div class="prix-ajouter">
+            <h5 class="card-title ">{{item.prix}} </h5>
+            <a>
+
+                <i class="fa-solid fa-0.1x fa-cart-plus" data-toggle="tooltip" data-placement="top" title="Ajouter"></i>
+
+            </a>
+        </div>
+        <img class="card-img-top" src="../assets/image/{{item.type}}.jpeg" alt="Card image cap">
+        <div class="quantite">
+            <div class="appquantite">
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>

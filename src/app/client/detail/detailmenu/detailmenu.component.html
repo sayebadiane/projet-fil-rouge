@@ -1,15 +1,12 @@
-{{menu?.menuBurgers|json}}
 <div class="main-deatail">
     <div>
-        
+       
     </div>
     <div class="photo-detail">
-        <img *ngIf="menu?.type=='burger'" src="data:image/png;base64,{{menu?.image}}" alt="" srcset="">
-        <img *ngIf="menu?.type=='menu'" src="data:image/png;base64,{{menu?.image}}" alt="" srcset="">
+        <img  src="data:image/png;base64,{{menu?.image}}" alt="" srcset="">
 
 
-        <p *ngIf="menu?.type=='burger'"> {{menu?.nom }}</p>
-        <p *ngIf="menu?.type=='menu'"> {{menu?.nom }}</p>
+        <p > {{menu?.nom }}</p>
 
     </div>
     <div class="text-detail">
@@ -22,13 +19,12 @@
         </div>
         <div class="quantite-prix">
             <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
-                <p *ngIf="menu?.type=='burger'">Prix: {{menu?.prix}} FCFA</p>
-                <p *ngIf="menu?.type=='menu'"> {{menu?.prix }}</p>
+                <p>Prix: {{menu?.prix}} FCFA</p>
 
             </div>
             
             <div class="appquantite">
-                <app-quantite></app-quantite>
+                <app-quantite [size]="fontSizePx" ></app-quantite>
             </div>
         </div>
 
@@ -38,7 +34,17 @@
 </div>
 <div class="burger">
 
-
+<div class="menuburgers">
     <app-detail-menu-burger *ngIf="(menu?.menuBurgers) as item" [menuburger]="item"></app-detail-menu-burger>
 
+</div>
+<div class="menuportionfrite">
+    <app-detail-portion-frite *ngIf="(menu?.menuPortionFrites) as frite" [frite]="frite"></app-detail-portion-frite>
+
+</div>
+
+
+</div>
+<div class="menuboissonTaille">
+    <app-detail-boisson-menu *ngIf="menu?.menuTailles as boisson" [menuboisson]="boisson"></app-detail-boisson-menu>
 </div>

@@ -1,9 +1,9 @@
 <div class="main-deatail">
   <div class="photo-detail">
-   <img *ngIf="burg?.type=='burger'" src="data:image/png;base64,{{burg?.image}}" alt="" srcset="">
+   <img  src="data:image/png;base64,{{burg?.image}}" alt="" srcset="">
 
    
-   <p *ngIf="burg?.type=='burger'">  {{burg?.nom }}</p>
+   <p >  {{burg?.nom }}</p>
 
   </div>
   <div class="text-detail">
@@ -16,12 +16,12 @@
     </div>
     <div class="quantite-prix">
         <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">                
-          <p *ngIf="burg?.type=='burger'">Prix: {{burg?.prix}} FCFA</p>
+          <p>Prix: {{burg?.prix}} FCFA</p>
 
          </div>
-         <div class="appquantite">
-          <app-quantite></app-quantite>
-         </div>
+        <div class="appquantite">
+          <app-quantite [size]="fontSizePx" (onYelle)="yell($event)"></app-quantite>
+        </div>
     </div>
 
   </div>

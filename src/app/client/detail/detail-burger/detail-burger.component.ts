@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { menu } from '../../shared/models/boissonTaille';
 import { ComplementDetail } from '../../shared/models/complementDetail';
 import { Produit } from '../../shared/models/modelProduit';
@@ -10,6 +10,8 @@ import { Produit } from '../../shared/models/modelProduit';
 })
 export class DetailBurgerComponent implements OnInit {
   @Input() burg: Produit | undefined = undefined
+  @Output() onYelle = new EventEmitter;
+  nbr: number|undefined;
 
 
 
@@ -17,5 +19,10 @@ export class DetailBurgerComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  fontSizePx = 0
+
+  yell(e: any) {
+    this.onYelle.emit([e,'burger']);  }
+  
 
 }

@@ -11,6 +11,9 @@ import { CardBoisonComponent } from './card-boison/card-boison.component';
 import { RouterModule } from '@angular/router';
 import { DetailmenuComponent } from './detailmenu/detailmenu.component';
 import { DetailMenuBurgerComponent } from './detail-menu-burger/detail-menu-burger.component';
+import { DetailBoissonMenuComponent } from './detail-boisson-menu/detail-boisson-menu.component';
+import { DetailPortionFriteComponent } from './detail-portion-frite/detail-portion-frite.component';
+import { FriteComponent } from './frite/frite.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { DetailMenuBurgerComponent } from './detail-menu-burger/detail-menu-burg
     CardBoisonComponent,
     DetailmenuComponent,
     DetailMenuBurgerComponent,
+    DetailBoissonMenuComponent,
+    DetailPortionFriteComponent,
+    FriteComponent,
   ],
   imports: [
     CommonModule,

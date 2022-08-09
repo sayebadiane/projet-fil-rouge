@@ -59,12 +59,12 @@
 .text{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 .ajouter{
     display: flex;
     flex-direction: row;
 }
 .detail{
-    margin-left: 10em;
     background-color: #F00000;
 }

@@ -3,6 +3,7 @@ export interface Produit {
     nom?: string
     image?: Blob
     prix?: number
-    type?:string
+    type?: string
+    description?: string
    
 }

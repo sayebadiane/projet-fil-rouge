@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { menu } from '../../shared/models/boissonTaille';
 
 
@@ -9,11 +9,17 @@ import { menu } from '../../shared/models/boissonTaille';
 })
 export class DetailmenuComponent implements OnInit {
   @Input() menu: menu | undefined = undefined
+ 
 
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  yell(e:any) {
+    alert(e)
+    
+    
+  }
+  fontSizePx = 1;
 }

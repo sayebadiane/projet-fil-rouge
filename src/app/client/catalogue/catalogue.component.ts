@@ -40,9 +40,12 @@ export class CatalogueComponent implements OnInit {
         this.catalogue = data.produits
       }
       else {
+        
        
         this.catalogue = data.produits?.filter(produit =>
-          produit.type==a)
+          produit.type === a)
+
+        
       }
       })
     }

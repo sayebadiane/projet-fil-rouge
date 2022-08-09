@@ -21,7 +21,6 @@ export class ProduitService {
 
     return this.http.get<Produit[]>(this.url);
  
-    console.log("hum");
 
   }
 }

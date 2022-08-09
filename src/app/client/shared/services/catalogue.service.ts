@@ -19,7 +19,6 @@ export class CatalogueService {
     
       map(
         data => {
-          console.log(data)
           
           let catalogue:Catalogue = {
             burgers: data['hydra:member'][0]['burgers'],
@@ -27,6 +26,7 @@ export class CatalogueService {
           }
           
           data.produits = [...catalogue.burgers, ...catalogue.menus]
+          
           
           
           return data

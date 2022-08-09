@@ -1,34 +1,26 @@
-
-
 <app-header></app-header>
 <div>
-<button type="button" class="btn btn1 btn-danger">Ajouter au panier</button>
-
-
+  
+  <button type="submit" (click)="valider()" class="btn btn1 btn-danger">
+    Ajouter au panier</button>
+  
 </div>
-<ng-container *ngIf="details?.burgers?.type=='burger'"  >
-    <app-detail-burger [burg]="details?.burgers"></app-detail-burger>
-
+<ng-container *ngIf="details?.burgers"  >
+  <app-detail-burger [burg]="details?.burgers" (onYelle)="yell($event)"></app-detail-burger>
 </ng-container>
-<ng-container *ngIf="details?.menus?.type=='menu'" >
-    <app-detailmenu [menu]="details?.menus"></app-detailmenu>
-
+<ng-container *ngIf="details?.menus" >
+  <app-detailmenu [menu]="details?.menus"></app-detailmenu>
 </ng-container>
 
 
 <div class="choix-complement">
   <button type="button" class="btn btn2 btn-dark">Voir nos Boissons et Frites</button>
-
+</div>
+<div class="complement" >
+<app-card-boison  [boisson]="details?.boissontailles"></app-card-boison>
 
 </div>
 <div class="complement">
-<app-card-boison></app-card-boison>
-<app-card-boison></app-card-boison>
-<app-card-boison></app-card-boison>
-<app-card-boison></app-card-boison>
-<app-card-boison></app-card-boison>
-<app-card-boison></app-card-boison>
-<app-card-boison></app-card-boison>
-<app-card-boison></app-card-boison>
+<app-frite [frite]="details?.portionfrites"></app-frite>
 </div>
 <app-foother></app-foother>

@@ -1,11 +1,16 @@
-.boison-detail{
-    width: 15em;
+/* .boisson-detail{
+    width: auto;
     height: 17em;
     margin-left: 4em;
     display: flex;
-    flex-direction: column;
     margin-top: 3em;
+    flex-wrap: wrap;
+    flex-direction: row;
     margin-bottom: 3em;
+}
+.ok{
+    display: flex;
+    flex-direction: row;
 }
 .boison-prix-quantite{
     flex:1.5;
@@ -51,4 +56,21 @@
 
 .buttonDetail {
     background-color: black;
+} */
+.boisson{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    margin-left: 2em;
+}
+.quantite{
+    margin-left: -2em;
+}
+.prix-ajouter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

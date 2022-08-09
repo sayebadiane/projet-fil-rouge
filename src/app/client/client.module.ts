@@ -8,6 +8,7 @@ import { ImagebogyComponent } from './imagebogy/imagebogy.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { CardComponent } from './card/card.component';
 import { ListeCadrdeComponent } from './liste-cadrde/liste-cadrde.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ListeCadrdeComponent } from './liste-cadrde/liste-cadrde.component';
   imports: [
     CommonModule,
     ClientRoutingModule,
-    LayoutModule
+    LayoutModule,
+    RouterModule,
   ],
   exports: [
     ListeCadrdeComponent,

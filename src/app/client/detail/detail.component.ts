@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ComplementDetail } from '../shared/models/complementDetail';
 import { ComplementDetailService } from '../shared/services/complement-detail.service';
@@ -9,7 +9,8 @@ import { ComplementDetailService } from '../shared/services/complement-detail.se
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  details: ComplementDetail| undefined = undefined
+  details: ComplementDetail | undefined = undefined
+  
 
 
   constructor(private service:ComplementDetailService,public route:ActivatedRoute) { }
@@ -18,9 +19,26 @@ export class DetailComponent implements OnInit {
   let  id = this.route.snapshot.paramMap.get('id');
     this.service.detail(id).subscribe(data => {
       this.details=data
-      console.log(this.details)
       
     })
+  }
+  ok(): boolean{
+    
+    
+   return true
+  }
+  valider(): void{
+    alert("hum")
+  }
+  
+  yell(e: any) {
+    console.log("doul" + e[0])
+    console.log("day" + e[1]);
+    if (e[1] === "burger") {
+      if (this.details) {
+        this.details.nbrBurger = e[0]; 
+      }
+         }
   }
 
 }

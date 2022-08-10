@@ -39,6 +39,7 @@ import { FriteComponent } from './frite/frite.component';
     DetailBurgerComponent,
 
 
+
     
   ]
 })

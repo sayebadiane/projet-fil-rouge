@@ -10,6 +10,8 @@ import { Produit } from '../../shared/models/modelProduit';
 })
 export class DetailBurgerComponent implements OnInit {
   @Input() burg: Produit | undefined = undefined
+  @Input() q: number | undefined = undefined
+
   @Output() onYelle = new EventEmitter;
   nbr: number|undefined;
 
@@ -18,11 +20,13 @@ export class DetailBurgerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
-  fontSizePx = 0
+  fontSizePx = 1
 
   yell(e: any) {
-    this.onYelle.emit([e,'burger']);  }
+    this.onYelle.emit([e, 'burger']);
+  }
   
 
 }

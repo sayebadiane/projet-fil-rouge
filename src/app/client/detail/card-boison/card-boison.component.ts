@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit ,Input, Output, EventEmitter} from '@angular/core';
 import { boissonTaille } from '../../shared/models/boissonTaille';
 import { Produit } from '../../shared/models/modelProduit';
 
@@ -9,13 +9,17 @@ import { Produit } from '../../shared/models/modelProduit';
 })
 export class CardBoisonComponent implements OnInit {
   @Input('boisson') boisson: boissonTaille[] | undefined = undefined
+  @Output() boissonpris = new EventEmitter()
 
 
-  constructor() { }
+
+  constructor() { } 
 
   ngOnInit(): void {
+    
   }
   fontSizePx = 0;
+  
   
 
 }

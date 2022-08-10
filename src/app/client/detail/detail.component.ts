@@ -10,6 +10,7 @@ import { ComplementDetailService } from '../shared/services/complement-detail.se
 })
 export class DetailComponent implements OnInit {
   details: ComplementDetail | undefined = undefined
+  public p:number|null=null
   
 
 
@@ -30,15 +31,27 @@ export class DetailComponent implements OnInit {
   valider(): void{
     alert("hum")
   }
-  
+
   yell(e: any) {
     console.log("doul" + e[0])
     console.log("day" + e[1]);
     if (e[1] === "burger") {
       if (this.details) {
-        this.details.nbrBurger = e[0]; 
+        this.details.nbrBurger = e[0];        
+        if (this.service) {
+          this.service.panier = this.details;
+        }
       }
-         }
+    }
+    else if (e[1] === "menu") {
+      if (this.details) {
+        this.details.nbrMenu = e[0];
+        if (this.service) {
+          this.service.panier = this.details;
+        }
+      }
+      
+    }
   }
 
 }

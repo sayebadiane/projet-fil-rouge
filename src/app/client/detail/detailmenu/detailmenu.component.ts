@@ -9,17 +9,18 @@ import { menu } from '../../shared/models/boissonTaille';
 })
 export class DetailmenuComponent implements OnInit {
   @Input() menu: menu | undefined = undefined
- 
+  @Output() onYelle = new EventEmitter;
+
+   
 
 
   constructor() { }
 
   ngOnInit(): void {
   }
-  yell(e:any) {
-    alert(e)
+  yell(e: any) {
     
-    
+    this.onYelle.emit([e, 'menu']);
   }
   fontSizePx = 1;
 }

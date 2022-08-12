@@ -9,6 +9,8 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
 import { CardComponent } from './card/card.component';
 import { ListeCadrdeComponent } from './liste-cadrde/liste-cadrde.component';
 import { RouterModule } from '@angular/router';
+import { QuantiteComponent } from './detail/quantite/quantite.component';
+import { NgToastModule } from 'ng-angular-popup';
 
 
 @NgModule({
@@ -17,17 +19,18 @@ import { RouterModule } from '@angular/router';
     ImagebogyComponent,
     CatalogueComponent,
     CardComponent,
-    ListeCadrdeComponent
+    ListeCadrdeComponent,
   ],
   imports: [
     CommonModule,
     ClientRoutingModule,
     LayoutModule,
     RouterModule,
+    NgToastModule
   ],
   exports: [
     ListeCadrdeComponent,
-    ImagebogyComponent
+    ImagebogyComponent,
   ]
   
 })

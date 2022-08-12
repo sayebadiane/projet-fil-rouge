@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { buffer, map,observable,pipe,tap } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
+import { DetailComponent } from '../../detail/detail.component';
 import { Catalogue } from '../models/catalogue';
 
 @Injectable({
@@ -10,7 +11,6 @@ import { Catalogue } from '../models/catalogue';
 export class CatalogueService {
   private url: string = "http://localhost:8000/api/catalogues"
   private urlBurger: string = "http://localhost:8000/api/burgers"
-
   constructor(private http: HttpClient) { }
 
   all(): Observable<Catalogue> {
@@ -71,6 +71,7 @@ export class CatalogueService {
         }
       )
     )
+    
 
   };
 }

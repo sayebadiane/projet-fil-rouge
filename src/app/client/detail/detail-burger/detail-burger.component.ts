@@ -22,7 +22,7 @@ export class DetailBurgerComponent implements OnInit {
   ngOnInit(): void {
     
   }
-  fontSizePx = 1
+  fontSizePx = 0
 
   yell(e: any) {
     this.onYelle.emit([e, 'burger']);

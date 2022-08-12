@@ -1,0 +1,32 @@
+.panier {
+    width: 70%;
+    height: 15vh;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.image1 {
+    flex: 1;
+    /* border-top: 1em; */
+    margin-top: 5px;
+}
+
+.image {
+    width: 20%;
+    height: 85%;
+    margin-top: 2px;
+    margin-left: 2em;
+}
+
+.prix {
+    flex: 1;
+    margin-top: 5%;
+}
+
+.quantite {
+    flex: 1;
+    margin-top: 5%;
+}

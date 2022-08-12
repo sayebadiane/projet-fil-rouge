@@ -1,9 +1,31 @@
-
 <app-header></app-header>
-<div>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-        Tempore quam totam corporis temporibus
-         perspiciatis eius praesentium repudiandae ratione eum officia 
-        et magni animi reprehenderit eveniet, accusantium neque facilis distinctio sit.</p>
+<div class="panier">
+
+    <div class="menu_burger">
+        <ng-container>
+            <app-panier-burger [burger]="panier?.burgerCommandes"></app-panier-burger>
+
+
+        </ng-container>
+        <ng-container >
+            <app-panier-menu [menu]="panier?.menuCommandes"></app-panier-menu>
+
+        </ng-container>
+        <div>
+            <button type="button" class="btn btn-danger">Livraisson</button>
+
+            <button type="button" class="btn btn-danger">sur place</button>
+
+
+        </div>
+    </div>
+    <div class="commander">
+        <div>
+            <p>Total commande:{{ panier?.montant}}FCFA</p>
+
+            <button type="submit" (click)="commenderclient()"  class="btn btn1 btn-danger">
+                Commander</button>
+
+        </div>
+    </div>
 </div>
-<app-foother></app-foother>

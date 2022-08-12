@@ -1,0 +1,14 @@
+<div class="panier" *ngFor="let item of menu">
+
+    <div class="image1">
+        <img class="rounded-circle image" src="data:image/png;base64,{{item.burger?.image}}" alt="" srcset="">
+        <p>{{item.burger?.nom}}</p>
+    </div>
+    <div class="quantite">
+        nombre:{{item.quantite}}
+    </div>
+    <div class="prix">
+        prix:{{item.burger?.prix}} FCFA
+    </div>
+    
+</div>

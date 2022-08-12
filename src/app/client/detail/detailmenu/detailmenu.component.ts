@@ -22,5 +22,5 @@ export class DetailmenuComponent implements OnInit {
     
     this.onYelle.emit([e, 'menu']);
   }
-  fontSizePx = 1;
+  fontSizePx = 0;
 }

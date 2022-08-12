@@ -1,0 +1,17 @@
+.panier{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding-top: 6em;
+}
+.menu_burger{
+   flex: 10;
+}
+.commander{
+    flex: 2;
+    border: 10px solid black;
+}
+.btn{
+    margin-left: 5em;
+}

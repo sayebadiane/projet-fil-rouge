@@ -3,15 +3,18 @@ import { Produit } from "./modelProduit"
 export interface Commande {
     montant: number
     burgerCommandes?: menuburgers[]
-    menuCommandes?:menuburgers[]
+    menuCommandes?: menuburgers[]
+    zone?: zone 
 }
-export interface objetMenuOuBurger{
-    id?:number
 
-}
 export interface menuburgers {
     quantite?: number,
-    burger?: Produit
+    burger?: Produit | null
+    menu?: Produit | null
+   
   
 
+}
+export interface zone{
+    id?:number
 }

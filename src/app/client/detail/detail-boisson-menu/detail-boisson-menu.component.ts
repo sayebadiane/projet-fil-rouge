@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { count } from 'rxjs';
 import { boissonTaille } from '../../shared/models/boissonTaille';
 import { menuTailles } from '../../shared/models/menuTailles';
@@ -11,6 +11,8 @@ import { menuTailles } from '../../shared/models/menuTailles';
 })
 export class DetailBoissonMenuComponent implements OnInit {
   @Input('menuboisson') menuboisson: menuTailles[] | undefined = undefined
+  @Output() onYelle = new EventEmitter;
+
 
 
   constructor() { }
@@ -20,8 +22,8 @@ export class DetailBoissonMenuComponent implements OnInit {
   fontSizePx = 0;
   
   yell(e: any): void{
-    
-    // console.log(this.menuboisson)
+   
+   this.onYelle.emit([this.menuboisson?.push])     
    
   
   }

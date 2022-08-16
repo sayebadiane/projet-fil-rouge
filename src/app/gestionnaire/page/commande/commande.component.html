@@ -1,0 +1,41 @@
+
+<app-header></app-header>
+<div class="panier" style="padding-top: 10em;">
+    <input style="margin-left:4em ;" type="text" placeholder="filtre par etat">
+    <input style="margin-left:4em ;" type="date" placeholder="filtre par Date"  [(ngModel)]="filterDate">
+    <input style="margin-left:4em ;" type="text" placeholder="filtre par zone" [(ngModel)]="filterZone">
+    <input style="margin-left:4em ;" type="text" placeholder="filtre par client" [(ngModel)]="filterClient">
+
+
+
+    <table class="table table table-striped">
+        <thead>
+            <tr>
+                <th>client</th>
+                <th>NUMERO COMMANDE</th>
+                <th>DATE COMMANDE</th>
+                <th>ETAT COMMANDE</th>
+                <th>MONTANT COMMANDE</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of commande  | FilterDatePipe:filterDate |FilterPipeZone:filterZone | FilterPipeClient:filterClient">
+                <td>{{ item.client.login}}</td>
+                <td>{{ item.numeroCommande}}</td>
+                <td>{{item.date | date}}</td>
+                <td>{{ item.etat}}</td>
+                <td>{{item.montant }} FCFA</td>
+                <td><a href="">Detail</a></td>
+                <td><a href="">Recommander</a></td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+
+
+
+</div>

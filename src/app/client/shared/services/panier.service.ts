@@ -27,4 +27,5 @@ export class PanierService {
     }
     console.log(this.panier)
   }
+  
 }

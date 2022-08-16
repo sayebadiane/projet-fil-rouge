@@ -19,13 +19,15 @@ export class ExampleInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         request=request.clone({
             setHeaders: {
-                Authorization: `Bearer ${this.serviveauto.token}`
+                Authorization: `Bearer ${localStorage.getItem('token')}`
+
+                
             }
         })
         return next.handle(request).pipe(
             tap((event: HttpEvent<any>) => {
                 if (event instanceof HttpResponse) {
-                    
+
                 }
             }, (error: any) => {
                 if (error instanceof HttpErrorResponse) {

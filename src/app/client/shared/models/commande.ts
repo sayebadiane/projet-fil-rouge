@@ -1,7 +1,11 @@
 import { Produit } from "./modelProduit"
 
 export interface Commande {
-    montant: number
+    id?:number ,
+    numeroCommande?: string,
+    date?: Date,
+    etat?: string,
+    montant?: number
     burgerCommandes?: menuburgers[]
     menuCommandes?: menuburgers[]
     zone?: zone 
@@ -16,5 +20,7 @@ export interface menuburgers {
 
 }
 export interface zone{
-    id?:number
+    id?: number
+    nom?: string
+    prix?:number
 }

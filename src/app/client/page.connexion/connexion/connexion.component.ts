@@ -28,6 +28,8 @@ export class ConnexionComponent implements OnInit {
   generationToken(): void{
     this.service.token(this.login, this.password).subscribe(data => {
       this.tok = data;
+     localStorage.setItem('token', data.token);
+
       
       this.serviceautho.token = data.token;
       console.log(data.token);

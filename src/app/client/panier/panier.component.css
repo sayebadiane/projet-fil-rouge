@@ -1,17 +1,24 @@
 .panier{
-    width: 100%;
+    width: 90%;
     height: auto;
     display: flex;
     flex-direction: row;
-    padding-top: 6em;
+    padding-top: 10em;
+    margin-left: 5%;
+    box-shadow: 2px 2px 2px 1px red;   
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: center;
 }
 .menu_burger{
-   flex: 10;
+    border: 1px solid black;
+   flex: 7;
 }
 .commander{
     flex: 2;
-    border: 10px solid black;
+    border: 1px solid black;
 }
 .btn{
+    margin-top: 4em;
     margin-left: 5em;
 }

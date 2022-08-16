@@ -19,6 +19,7 @@ export class CatalogueService {
     
       map(
         data => {
+         
           
           let catalogue:Catalogue = {
             burgers: data['hydra:member'][0]['burgers'],

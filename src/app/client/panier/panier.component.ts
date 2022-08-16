@@ -4,6 +4,9 @@ import { ComplementDetail } from '../shared/models/complementDetail';
 import { CommandeService } from '../shared/services/commande.service';
 import { ComplementDetailService } from '../shared/services/complement-detail.service';
 import { PanierService } from '../shared/services/panier.service';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import {  FormGroup } from '@angular/forms';
+import { BurgerComponent } from '../burger/burger.component';
 
 @Component({
   selector: 'app-panier',
@@ -12,8 +15,7 @@ import { PanierService } from '../shared/services/panier.service';
 })
 export class PanierComponent implements OnInit {
   public panier: Commande | undefined
- 
-
+  
   constructor(private service: PanierService, private serviceCommande: CommandeService) { }
 
   ngOnInit(): void {
@@ -29,10 +31,26 @@ export class PanierComponent implements OnInit {
     // localStorage.setItem("p","this.panier")
 
   }
-  commenderclient() {
+  commenderclient(event: any) {
     let zone = {
-      id:1
+
+      id: Number(event.target.value)
     }
+    let p:number=0
+    this.panier?.burgerCommandes?.map(
+      
+      BurgerCom => {
+        if (BurgerCom.burger?.prix)
+        p+=BurgerCom.burger.prix
+      }
+    )
+    if (this.panier?.montant) {
+      this.panier.montant = p
+      alert(this.panier.montant)
+    
+      
+    }
+    
     this.serviceCommande.commenderBack(this.panier?.montant, this.panier?.burgerCommandes, this.panier?.menuCommandes, zone).subscribe(
       data => {
         alert("Commande Enregistrer")
@@ -79,4 +97,16 @@ export class PanierComponent implements OnInit {
   //   if (this.serviceCommande.commande?.burgerCommandes)
   //   //  this.serviceCommande.commande.burgerCommandes=this.panier?.burgers
   // }
+
+
+
+  bookTitleControl = new FormControl();
+  bookDescriptionControl = new FormControl();
+
+  submitBook() {
+    console.log(this.bookTitleControl.value);
+    console.log(this.bookDescriptionControl.value);
+  }
+ 
+
 }

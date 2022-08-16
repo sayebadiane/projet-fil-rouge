@@ -1,0 +1,31 @@
+
+<div class="panier" >
+
+  
+<table class="table table table-striped">
+    <thead>
+        <tr>
+            <th >NUMERO COMMANDE</th>
+            <th >DATE COMMANDE</th>
+            <th>ETAT COMMANDE</th>
+            <th>MONTANT COMMANDE</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let item of commande">
+            <td>{{ item.numeroCommande}}</td>
+            <td>{{item.date }}</td>
+            <td>{{ item.etat}}</td>
+            <td>{{item.montant }}</td>  
+            <td><a href="">Detail</a></td>
+            <td><a href="">Recommander</a></td>
+
+        </tr>
+       
+    </tbody>
+</table>
+
+
+
+
+</div>

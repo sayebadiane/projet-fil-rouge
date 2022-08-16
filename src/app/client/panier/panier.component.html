@@ -1,31 +1,42 @@
 <app-header></app-header>
-<div class="panier">
+<ng-container *ngIf="((panier?.burgerCommandes)?.length==0 && panier?.menuCommandes?.length==0)" >
+   <p style="padding-top: 80;">Le panier est vide Where does it come from?
 
-    <div class="menu_burger">
-        <ng-container>
-            <app-panier-burger [burger]="panier?.burgerCommandes"></app-panier-burger>
+ </p>
 
+</ng-container>
+<ng-container *ngIf="((panier?.burgerCommandes)?.length!=0 || panier?.menuCommandes?.length!=0)">
+    <div class="panier">
+    
+        <div class="menu_burger">
+            <ng-container>
+                <app-panier-burger [burger]="panier?.burgerCommandes"></app-panier-burger>
+    
+    
+            </ng-container>
+            <ng-container>
+                <app-panier-menu [menu]="panier?.menuCommandes"></app-panier-menu>
+    
+            </ng-container>
+    
+        </div>
+        <div class="commander">
+            <div>
+                <select #zonechoissie (change)="commenderclient($event)" class="form-select" aria-label="Default select example">
+                    <option selected>zone de livraisson</option>
+                    <option name="hlm" value="1">HLM</option>
+                    <option name="parcelle" value="2">PARCELLE</option>
+    
+                </select>
+                 <p>Total commande:{{ panier?.montant}}FCFA</p>
 
-        </ng-container>
-        <ng-container >
-            <app-panier-menu [menu]="panier?.menuCommandes"></app-panier-menu>
-
-        </ng-container>
-        <div>
-            <button type="button" class="btn btn-danger">Livraisson</button>
-
-            <button type="button" class="btn btn-danger">sur place</button>
-
-
+                <button type="submit" (click)="commenderclient($event)" class="btn btn1 btn-danger">
+                    Commander</button>
+    
+            </div>
+           
         </div>
     </div>
-    <div class="commander">
-        <div>
-            <p>Total commande:{{ panier?.montant}}FCFA</p>
 
-            <button type="submit" (click)="commenderclient()"  class="btn btn1 btn-danger">
-                Commander</button>
+</ng-container>
 
-        </div>
-    </div>
-</div>

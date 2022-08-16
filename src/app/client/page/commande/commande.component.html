@@ -1,7 +1,11 @@
 
-<div class="panier" >
+<app-header></app-header>
+<div class="panier" style="padding-top: 10em;">
+ <label>Filter par Etat:</label>
+<input type="text" placeholder="filtre par etat" [(ngModel)]="filtreEtat">
+<label>Filter par Date:</label>
+<input type="date" placeholder="filtre par etat" [(ngModel)]="filtreDate">
 
-  
 <table class="table table table-striped">
     <thead>
         <tr>
@@ -9,14 +13,16 @@
             <th >DATE COMMANDE</th>
             <th>ETAT COMMANDE</th>
             <th>MONTANT COMMANDE</th>
+            <th>Action</th>
+
         </tr>
     </thead>
     <tbody >
-        <tr *ngFor="let item of commande">
+        <tr *ngFor="let item of commande | FilterPipe:filtreEtat | FilterPipeDate:filtreDate">
             <td>{{ item.numeroCommande}}</td>
-            <td>{{item.date }}</td>
+            <td>{{item.date | date}}</td>
             <td>{{ item.etat}}</td>
-            <td>{{item.montant }}</td>  
+            <td>{{item.montant }} FCFA</td>  
             <td><a href="">Detail</a></td>
             <td><a href="">Recommander</a></td>
 

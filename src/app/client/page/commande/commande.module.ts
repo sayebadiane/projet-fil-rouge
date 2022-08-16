@@ -3,18 +3,23 @@ import { CommonModule } from '@angular/common';
 
 import { CommandeRoutingModule } from './commande-routing.module';
 import { CommandeComponent } from './commande.component';
-import { FilterPipe } from './filter.pipe.etat';
+import { FilterPipe, FilterPipeDate } from './filter.pipe.etat';
+import { LayoutModule } from '../../layout/layout.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     CommandeComponent,
-    FilterPipe
+    FilterPipe,
+    FilterPipeDate
 
   ],
   imports: [
     CommonModule,
-    CommandeRoutingModule
+    CommandeRoutingModule,
+    LayoutModule,
+   FormsModule
   ]
 })
 export class CommandeModule { }

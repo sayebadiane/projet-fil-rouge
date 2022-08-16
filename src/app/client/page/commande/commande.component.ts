@@ -8,8 +8,9 @@ import { CommandeService } from '../../shared/services/commande.service';
   styleUrls: ['./commande.component.css']
 })
 export class CommandeComponent implements OnInit {
-  public commande:  Commande[]|undefined=undefined
-
+  commande:  Commande[]=[]
+  filtreEtat: any
+  filtreDate:any
   constructor(private servicecommande: CommandeService) { }
 
   ngOnInit(): void {

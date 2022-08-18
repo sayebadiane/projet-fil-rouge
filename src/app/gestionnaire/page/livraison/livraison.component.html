@@ -1,0 +1,47 @@
+<div class="cont">
+    <div class="sidebar">
+        <app-header-admin></app-header-admin>
+
+    </div>
+    <div class="lister" style="padding-top: 5em;">
+            <h1 class="text-center">Les Commandes Terminer Par Zone</h1>
+
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button">Zone A</button>
+        </div>
+        <table class="table" style="padding-top: 10em;">
+            <thead>
+                <tr>
+                    <th>NUMERO COMMANDE</th>
+                    <th>DATE COMMANDE</th>
+                    <th>ETAT COMMANDE</th>
+                    <th>MONTANT COMMANDE</th>
+                    <th>Action</th>
+                
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-danger" *ngFor="let item of commande">
+                    <td>{{ item.numeroCommande}}</td>
+                    <td>{{item.date | date}}</td>
+                    <td>{{ item.etat}}</td>
+                    <td>{{item.montant }} FCFA</td>
+                    <td><a href="#">Detail</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <select [(ngModel)]="a" class="form-select" aria-label="Default select example" >
+          
+            <option *ngFor="let item of livreurs" value="{{item.id}}">{{ item.login}}</option>
+
+           
+            
+        </select>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="button" (click)="Enregistrerlivraison()" class="text-center btn  btn-lg"
+            style="margin-left:2em ; margin-top:1em ">Commander</button>
+
+        </div>
+
+    </div> 
+</div>

@@ -1,0 +1,26 @@
+.cont {
+    display: flex;
+}
+
+.lister {
+    flex: 8;
+}
+
+.sidebar {
+    flex: 2;
+}
+.btn{
+    background-color: none;
+}
+/* <div class="cont"><div class="sidebar"><app-header-admin></app-header-admin></div><div class="lister" style="padding-top: 5em;"></div></div> */
+/* .cont {
+    display: flex;
+}
+
+.lister {
+    flex: 8;
+}
+
+.sidebar {
+    flex: 2;
+} */

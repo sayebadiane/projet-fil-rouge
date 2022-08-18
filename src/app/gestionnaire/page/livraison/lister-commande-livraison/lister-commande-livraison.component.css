@@ -1,0 +1,11 @@
+.cont {
+    display: flex;
+}
+
+.lister {
+    flex: 8;
+}
+
+.sidebar {
+    flex: 2;
+}
